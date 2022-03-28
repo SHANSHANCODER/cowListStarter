@@ -10,7 +10,8 @@ constructor(props){
 render(){
 
   return (
-  this.props.cows.map(cow=><Cow key={cow._id} cow={cow} getDescripUpdate={this.props.getDescripUpdate} />)
+  this.props.cows.map(cow=><Cow key={cow._id} cow={cow} getDescripUpdate={this.props.getDescripUpdate}
+    updateCow={this.props.updateCow}/>)
   )
 }
 

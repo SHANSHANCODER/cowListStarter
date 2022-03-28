@@ -58,6 +58,19 @@ var deleteOne = (id,callback)=>{
 //     console.log(result)
 //   }
 // } )
+
+var updateOne=(id,update,callback)=>{
+  Cow.findByIdAndUpdate(id,update,(err,result)=>{
+    if(err){
+      callback(err)
+    }else {
+      console.log("updateresult>>>>>",result)
+      callback(null,result)
+    }
+  })
+
+}
 module.exports.save = save;
 module.exports.retrieveall=retrieveall;
-module.exports.deleteOne=deleteOne
+module.exports.deleteOne=deleteOne;
+module.exports.updateOne=updateOne;

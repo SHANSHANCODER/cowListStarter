@@ -52,6 +52,19 @@ app.delete('/api/cows/:id',(req,res)=>{
   })
 })
 
+app.put('/api/cows/:id',(req,res)=>{
+
+ db.updateOne(req.params.id, req.body,(err,result)=>{
+   if(err){
+     res.status(500).send(err)
+   } else{
+     console.log("serverresult",result)
+    res.status(201).send(result)
+   }
+ })
+
+
+})
 
 app.listen(PORT, () => {
   console.log(`Server listening at localhost:${3000}!`);

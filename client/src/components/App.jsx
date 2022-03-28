@@ -23,6 +23,7 @@ constructor(props){
  // this.getDescripUpdate=this.getDescripUpdate.bind(this)
  this.updateCow=this.updateCow.bind(this)
  this.getDescripUpdate=this.getDescripUpdate.bind(this)
+
 }
 updateCow(){
   axios
@@ -58,7 +59,8 @@ render(){
     <br/>
     <br/>
 
-    <Cows cows={this.state.cows} getDescripUpdate={this.getDescripUpdate}/>
+    <Cows cows={this.state.cows} getDescripUpdate={this.getDescripUpdate}
+    updateCow={this.updateCow}/>
 </div>
   )
 }
